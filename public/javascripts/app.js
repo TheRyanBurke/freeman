@@ -16,6 +16,7 @@ freeman.controller('FreemanController', ['$scope', '$http', function($scope, $ht
   
   $scope.getLambda = function() {
     $http.get('/lambda');
+    $scope.messages.unshift("Requesting a Lambda!");
   };
   
   var getClientFromPool = function(poolSize, prefix) {
