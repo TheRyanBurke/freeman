@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  .header
+  .container
+    h1 Lambda Freeman
+    .description Freeman is an AWS Lambda monitor based on 
+      a(href='http://2lemetry.com', target='_blank') 2lemetry 
+      a(href='http://app.thingfabric.com', target='_blank') ThingFabric
+      br
+      div Project on 
+        a(href='http://github.com/theryanburke/freeman') GitHub
+    .row
+      .col-md-12(ng-controller='FreemanController')
+        .row
+          .col-md-8
+            h4 Graph of Client IDs in Use
+              table.table
+                tr(ng-repeat='row in graph')
+                  td.base(id='{{ col.id }}', ng-repeat='col in row', ng-class='col.class') {{ col.value }}
+          .col-md-4
+            .button-container
+              button.btn.btn-primary.btn-lg(ng-click='getLambda()') Start a Lambda!
+              span (You can click this button a lot!)
+            h4 Logs
+            p(ng-repeat='message in messages track by $index') {{ message }}
