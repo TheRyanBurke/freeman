@@ -4,6 +4,8 @@ Freeman is an AWS Lambda resource monitor which pipes data through 2lemetry Thin
 
 Second toy project using AWS Lambda.
 
+Blog post here: http://2lemetry.com/2014/12/12/visualizing-aws-lambda-consumption-thingfabric/
+
 ## Demo
 
 Currently deployed to Heroku at https://arcane-ocean-9359.herokuapp.com/
